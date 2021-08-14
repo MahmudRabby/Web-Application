@@ -34,7 +34,7 @@
 
 </header>
 
-<div class="login-form-container" id = "login">
+<div class="login-form-container">
 
     <i class="fas fa-times" id="form-close"></i>
 
@@ -85,21 +85,31 @@
             <img src="images/Trip.gif" alt="">
         </div>
 
-        <form action="booking.php" method="POST">
-
+        <form action="">
+            <div class="inputBox">
                 <h3>where to</h3>
-                <input class="inputBox" name="place" type="text" placeholder="place name">           
+                <input type="text" placeholder="place name">
+            </div>
+            <div class="inputBox">
                 <h3>how many</h3>
-                <input class="inputBox" name="person" type="number" placeholder="number of guests">           
+                <input type="number" placeholder="number of guests">
+            </div>
+            <div class="inputBox">
                 <h3>Email</h3>
-                <input class="inputBox" name="email" type="email" placeholder="email@.com">            
+                <input type="email" placeholder="type your email">
+            </div>
+            <div class="inputBox">
                 <h3>Phone Number</h3>
-                <input class="inputBox" name="phone" type="number" placeholder="+00">        
+                <input type="number" placeholder="give your phone number">
+            </div>
+            <div class="inputBox">
                 <h3>arrivals</h3>
-                <input class="inputBox" name="arrival" type="date">            
+                <input type="date">
+            </div>
+            <div class="inputBox">
                 <h3>leaving</h3>
-                <input class="inputBox" name="leaving" type="date">
-            
+                <input type="date">
+            </div>
             <input type="submit" class="btn" value="book now">
         </form>
 
@@ -122,8 +132,6 @@
 
     <div class="box-container">
 
-      
-
         <div class="box">
             <img src="images/p-1.jpg" alt="">
             <div class="content">
@@ -136,11 +144,9 @@
                     <i class="far fa-star"></i>
                 </div>
                 <div class="price"> BDT 5000 <span>BDT 7000.00</span> </div>
-                <a href="#" class="btn" on click= "loginDiv()">book now</a>
+                <a href="#" class="btn">book now</a>
             </div>
         </div>
-        
-        
 
         <div class="box">
             <img src="images/p-2.jpg" alt="">
@@ -221,7 +227,7 @@
                 <div class="price"> $1000.00 <span>$1200.00</span> </div>
                 <a href="#" class="btn">book now</a>
             </div>
-        </div> 
+        </div>
 
     </div>
 
@@ -464,13 +470,16 @@
             <img src="images/contact-img.svg" alt="">
         </div>
 
-        <form action="contact.php" method="POST">
-           
-                <input class="inputBox" name="name" type="text" placeholder="name">
-                <input class="inputBox" name="email" type="email" placeholder="email@.com">           
-                <input class="inputBox" name="number" type="number" placeholder="+00">
-                <input class="inputBox" name="subject" type="text" placeholder="subject">           
-            <textarea class="inputBox"  name="message" placeholder="message"></textarea>
+        <form action="">
+            <div class="inputBox">
+                <input type="text" placeholder="name">
+                <input type="email" placeholder="email">
+            </div>
+            <div class="inputBox">
+                <input type="number" placeholder="number">
+                <input type="text" placeholder="subject">
+            </div>
+            <textarea placeholder="message" name="" id="" cols="30" rows="10"></textarea>
             <input type="submit" class="btn" value="send message">
         </form>
 
@@ -520,13 +529,7 @@
     </div>
 </section>
 
-<script>
-    function logindiv() {
-   document.getElementById('login').style.display="block";
-}
-</script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="home.js"></script>
-
 </body>
 </html>
