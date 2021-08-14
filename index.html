@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Vacation Connection</title>
-    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="home.css">
-
+    <link rel="shortcut icon" href="https://img.icons8.com/doodle/50/000000/beach--v1.png"/>
+    <link rel="stylesheet" href="home.css">	
 </head>
-<body>      
-<header>
+<body> 
+    <header>
     <div id="menu-bar" class="fas fa-bars"></div>
+    <img src="https://img.icons8.com/doodle/50/000000/beach--v1.png"/>
     <a href="#" class="logo"><span>V</span>acation <span>C</span>onnection</a>
     <nav class="navbar">
         <a href="#home">home</a>
@@ -34,7 +34,7 @@
 
 </header>
 
-<div class="login-form-container">
+<div class="login-form-container" id = "login">
 
     <i class="fas fa-times" id="form-close"></i>
 
@@ -46,7 +46,7 @@
         <input type="checkbox" id="remember">
         <label for="remember">remember me</label>
         <p>forget password? <a href="#">click here</a></p>
-        <p>don't have and account? <a href="register.html">register now</a></p>
+        <p>don't have and account? <a href="register/register.html">register now</a></p>
     </form>
 
 </div>
@@ -85,23 +85,21 @@
             <img src="images/Trip.gif" alt="">
         </div>
 
-        <form action="">
-            <div class="inputBox">
+        <form action="booking.php" method="POST">
+
                 <h3>where to</h3>
-                <input type="text" placeholder="place name">
-            </div>
-            <div class="inputBox">
+                <input class="inputBox" name="place" type="text" placeholder="place name">           
                 <h3>how many</h3>
-                <input type="number" placeholder="number of guests">
-            </div>
-            <div class="inputBox">
+                <input class="inputBox" name="person" type="number" placeholder="number of guests">           
+                <h3>Email</h3>
+                <input class="inputBox" name="email" type="email" placeholder="email@.com">            
+                <h3>Phone Number</h3>
+                <input class="inputBox" name="phone" type="number" placeholder="+00">        
                 <h3>arrivals</h3>
-                <input type="date">
-            </div>
-            <div class="inputBox">
+                <input class="inputBox" name="arrival" type="date">            
                 <h3>leaving</h3>
-                <input type="date">
-            </div>
+                <input class="inputBox" name="leaving" type="date">
+            
             <input type="submit" class="btn" value="book now">
         </form>
 
@@ -124,6 +122,8 @@
 
     <div class="box-container">
 
+      
+
         <div class="box">
             <img src="images/p-1.jpg" alt="">
             <div class="content">
@@ -136,9 +136,11 @@
                     <i class="far fa-star"></i>
                 </div>
                 <div class="price"> BDT 5000 <span>BDT 7000.00</span> </div>
-                <a href="#" class="btn">book now</a>
+                <a href="#" class="btn" on click= "loginDiv()">book now</a>
             </div>
         </div>
+        
+        
 
         <div class="box">
             <img src="images/p-2.jpg" alt="">
@@ -219,7 +221,7 @@
                 <div class="price"> $1000.00 <span>$1200.00</span> </div>
                 <a href="#" class="btn">book now</a>
             </div>
-        </div>
+        </div> 
 
     </div>
 
@@ -462,16 +464,13 @@
             <img src="images/contact-img.svg" alt="">
         </div>
 
-        <form action="">
-            <div class="inputBox">
-                <input type="text" placeholder="name">
-                <input type="email" placeholder="email">
-            </div>
-            <div class="inputBox">
-                <input type="number" placeholder="number">
-                <input type="text" placeholder="subject">
-            </div>
-            <textarea placeholder="message" name="" id="" cols="30" rows="10"></textarea>
+        <form action="contact.php" method="POST">
+           
+                <input class="inputBox" name="name" type="text" placeholder="name">
+                <input class="inputBox" name="email" type="email" placeholder="email@.com">           
+                <input class="inputBox" name="number" type="number" placeholder="+00">
+                <input class="inputBox" name="subject" type="text" placeholder="subject">           
+            <textarea class="inputBox"  name="message" placeholder="message"></textarea>
             <input type="submit" class="btn" value="send message">
         </form>
 
@@ -521,7 +520,13 @@
     </div>
 </section>
 
+<script>
+    function logindiv() {
+   document.getElementById('login').style.display="block";
+}
+</script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="home.js"></script>
+
 </body>
 </html>
